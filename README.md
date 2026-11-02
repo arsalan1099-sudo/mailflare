@@ -7,7 +7,7 @@ A self-hosted alternative to Google Workspace. Setup **custom domain Emails**, *
 
 Run it on Cloudflare or Docker. Send and receive with Cloudflare, Resend or Amazon SES. Store files in R2, Backblaze B2 or AWS S3. Use D1, Postgres, MySQL or Turso for the database.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/hieunc229/mailflare)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/arsalan1099-sudo/mailflare)
 
 ## Screenshots
 
@@ -64,6 +64,9 @@ New Amazon SES accounts start in a sandbox. Ask AWS for production access to lif
 
 ## Deploy
 
+> **Fork-specific free deployment and security checklist:** [read this first](docs/FORK_FREE_DEPLOYMENT.md). The Deploy button below uses this fork, not the upstream repository. Admin branding customization requires a Pro/Team license; do not confuse branding with the required Worker name `mailflare`.
+
+
 1. **Deploy the app.** Click **Deploy to Cloudflare**. Keep the app name `mailflare`, or it will break.
 2. **Finish setup.** Open the app at `/setup` and create your admin account.
 3. **Connect a domain.** Add a domain from the same Cloudflare account, then create your first mailbox.
@@ -80,7 +83,7 @@ More options: [deployment guide](docs/deployment.md).
 Paste this into an AI agent that has terminal access (Claude Code, Codex, Cursor and similar):
 
 ```text
-Install Mailflare for me from https://github.com/hieunc229/mailflare on my Cloudflare account.
+Install Mailflare for me from https://github.com/arsalan1099-sudo/mailflare on my Cloudflare account.
 
 1. Read README.md, docs/deployment.md and wrangler.jsonc first.
 2. Ask me for my Cloudflare account ID and two API tokens, using a secret input:
