@@ -23,6 +23,10 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
+      - name: Generate database migration bundle
+        run: npm run db:bundle
+      - name: Strict TypeScript check
+        run: npx tsc --noEmit
       - name: Lint
         run: npm run lint
       - name: Unit and integration tests
