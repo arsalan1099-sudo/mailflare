@@ -22,6 +22,7 @@ jobs:
           node-version: '22'
           cache: npm
       - name: Install locked dependencies
+        id: deps
         run: npm ci
       - name: Generate database migration bundle
         run: npm run db:bundle
@@ -30,6 +31,8 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Unit and integration tests
+        if: ${{ !cancelled() && steps.deps.outcome == 'success' }}
         run: node --test tests/*.test.mjs
       - name: Cloudflare Worker build
+        if: ${{ !cancelled() && steps.deps.outcome == 'success' }}
         run: npm run build
